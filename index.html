@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/appherr.js"></script>
+    <script src="js/appbarn.js"></script>
+    <script src="js/controller1.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/controllerherr.js"></script>
+    <script src="js/controllerbarn.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container" ng-controller="myController">
+        <div>
+            <h1>{{adress.name}}</h1>
+
+
+        </div>
+
+
+
+        <div id="dd">
+            <i class="fa fa-search"></i>
+        </div>
+        <div>
+            <input id="text" placeholder="Sök efter din favoritprodakt">
+
+        </div>
+
+
+
+        <br>
+        <div class="nav">
+            <ul>
+                <div id="list-1">
+                    <il><a href="dam.html"> Kvinna</il></a>
+                </div>
+                <div id="list-2">
+                    <il><a href="barn.html"> Barn</il></a>
+
+                </div>
+                <div id="list-3">
+                    <il><a href="Herr.html"> Herr</il></a>
+                </div>
+                <div id="list-4">
+                    <il>Logga in</il>
+                </div>
+                <div id="list-5">
+                    <il>Hitta butiker</il>
+                </div>
+
+            </ul>
+
+        </div>
+        <br>
+
+
+
+        <div class="bild" ng-controller="imageController">
+            <div ng-repeat="item in imges">
+                <img ng-src="Bilder//{{ item.image }}" alt="" height="200px" white="300"
+                    style="position: relative; border-radius: 20px; margin-top: 50px;">
+            </div>
+        </div>
+
+        <div>
+            <appfooter></appfooter>
+            <appfooter2></appfooter2>
+            <appfooter3></appfooter3>
+            <appfooter4></appfooter4>
+            <appfooter5></appfooter5>
+            <appfooter6></appfooter6>
+        </div>
+
+        <div ng-view></div>
+        <div id="fram">
+            <i class="fa fa-truck" style="font-size:25px;"></i>
+        </div>
+        <div id="twitter">
+
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div id="tillgram">
+            <i class="fa fa-paper-plane" style="font-size:25px;"></i>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

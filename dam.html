@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/controller1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="myController">
+        <div>
+            <h1>{{adress.name}}</h1>
+
+        </div>
+
+        <div id="dd">
+            <i class="fa fa-search"></i>
+        </div>
+        <div>
+            <input id="text" placeholder="Sök efter din favoritprodakt">
+        </div>
+        <div class="nav">
+            <ul id="menu">
+                <div id="list-1">
+                    <il><a href="dam.html"> Kvinna</il></a>
+                </div>
+                <div id="list-2">
+                    <il><a href="barn.html"> Barn</il></a>
+
+                </div>
+                <div id="list-3">
+                    <il><a href="Herr.html"> Herr</il></a>
+                </div>
+                <div id="list-4">
+                    <il>Logga in</il>
+                </div>
+                <div id="list-5">
+                    <il>Hitta butiker</il>
+                </div>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="bild" ng-controller="imageController">
+            <div ng-repeat="item in imges">
+                <img ng-src="Bilder//{{ item.image }}" alt="" height="130px" white="100"
+                    style="position: relative; border-radius: 20px; margin-top: 50px;">
+            </div>
+        </div>
+
+
+        <div
+            ng-init="lists=[{list1: 'Klänningar'},{list2: 'skor'},{list3:'Jeans'},{list4:'Beauty'},{list5:'Accessoarer'}
+    ,{list6:'Shorts'},{list7:'Badkläder'},{list8:'Plus size'},{list9:'Mammakläder'},{list10:'Sportkläder'},{list11:'Se alla'}]">
+
+            <ul class="lists">
+                <li ng-repeat="list in lists">
+                    <hr> {{list.list1}}
+
+                    {{list.list2}}
+
+                    {{list.list3}}
+                    {{list.list4}}
+                    {{list.list5}}
+                    {{list.list6}}
+                    {{list.list7}}
+                    {{list.list8}}
+                    {{list.list9}}
+                    {{list.list10}}
+                    {{list.list11}}
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div>
+        <appfooter></appfooter>
+        <appfooter2></appfooter2>
+        <appfooter3></appfooter3>
+        <appfooter4></appfooter4>
+        <appfooter5></appfooter5>
+        <appfooter6></appfooter6>
+    </div>
+
+
+    <div id="fram">
+        <i class="fa fa-truck" style="font-size:25px;"></i>
+    </div>
+
+
+
+
+    <div id="twitter">
+
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div id="tillgram">
+        <i class="fa fa-paper-plane" style="font-size:25px;"></i>
+
+    </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
